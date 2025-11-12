@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Garantia {
 
-    int id_garantia;
-    int id_prestamo;
-    String tipo;         // Hipotecaria, Prendaria, Personal
-    String descripcion;
-    double valor_estimado;
+    public int id_garantia;
+    public int id_prestamo;
+    public int id_tipo_garantia;
+    public String descripcion;
+    public double valor_estimado;
 }

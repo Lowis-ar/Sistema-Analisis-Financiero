@@ -7,14 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Usuario {
 
-    int id_usuario;
-    String nombre_usuario;
-    String contraseña;
-    String nivel_acceso; // Administrador, Asesor, Cajero, Consulta
-    String estado;       // Activo, Inactivo 
-    
-    
+    private int id_usuario;
+    private String nombre_usuario;
+    private String contraseña;
+    private int id_nivel;    
+    private boolean estado;  
+
 }
