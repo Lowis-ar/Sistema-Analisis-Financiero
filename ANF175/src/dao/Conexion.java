@@ -8,21 +8,16 @@ public class Conexion {
 
     // Parámetros de conexión
     String url = "jdbc:mysql://localhost:3306/sistema_financiero";
-    String usuario = "root"; 
-    String contraseña = "";  
+    String usuario = "root";
+    String contraseña = "";
     Connection conexion;
 
     // Constructor
     public Conexion() {
         try {
-            // Cargar el driver de MySQL
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            // Crear la conexión
+            // Crear la conexión directamente, ya no es necesario Class.forName
             conexion = DriverManager.getConnection(url, usuario, contraseña);
             System.out.println("Conexión exitosa a la base de datos");
-        } catch (ClassNotFoundException e) {
-            System.out.println("Error: Driver no encontrado");
-            e.printStackTrace();
         } catch (SQLException e) {
             System.out.println("Error: No se pudo conectar a la base de datos");
             e.printStackTrace();
